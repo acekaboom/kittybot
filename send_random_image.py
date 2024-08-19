@@ -1,5 +1,14 @@
 import requests
 from telebot import TeleBot
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+# Теперь переменная TOKEN, описанная в файле .env,
+# доступна в пространстве переменных окружения.
+
+TOKEN = os.getenv('TOKEN')
+ACCOUNT_SID = os.getenv('ACCOUNT_SID')
 
 bot = TeleBot(token=TOKEN)
 
